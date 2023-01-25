@@ -1,16 +1,15 @@
 const path =require('path')
-const Hmltwebpackplugin = require('html-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const minicssextraplugin = require ('mini-css-extract-plugin')
 const cssminimizerplugin = require('css-minimizer-webpack-plugin')
 const terserplugin = require('terser-webpack-plugin')
-const {cleanwebpackplugin}= require('clean-webpack-plugin')
+const { cleanwebpackplugin }= require('clean-webpack-plugin');
+
 module.exports = {
     entry: './src/index.js',
     output :{
         path : path.resolve(__dirname,'dist'),
         filename: 'bundle.js',
-        publicpath: './'
     },
     resolve:{
         extensions:['.js', '.jsx'],
@@ -57,7 +56,7 @@ module.exports = {
         new minicssextraplugin({
             filename: '[name].css'
         }),
-        new cleanwebpackplugin()
+        new cleanwebpackplugin(),
     ],
 
     optimization:{

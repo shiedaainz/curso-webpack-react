@@ -1,5 +1,4 @@
 const path =require('path')
-const Hmltwebpackplugin = require('html-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const minicssextraplugin = require ('mini-css-extract-plugin')
 
