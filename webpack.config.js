@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const minicssextraplugin = require ('mini-css-extract-plugin')
 const cssminimizerplugin = require('css-minimizer-webpack-plugin')
 const terserplugin = require('terser-webpack-plugin')
-const { cleanwebpackplugin }= require('clean-webpack-plugin');
+const { CleanWebpackPlugin }= require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -56,7 +56,7 @@ module.exports = {
         new minicssextraplugin({
             filename: '[name].css'
         }),
-        new cleanwebpackplugin(),
+        new CleanWebpackPlugin(),
     ],
 
     optimization:{
